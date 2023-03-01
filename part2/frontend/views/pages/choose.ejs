@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="jumbotron">
+            <% if (locals.music) { %>
+                <p>WE HAVE MUSIC</p>
+                Haenchen-Schnitzel:
+                <p> 2 large chicken breasts
+Salt and pepper
+4 Tbsp butter, divided
+Vegetable oil
+½ c unbleached all-purpose flour
+2 eggs, beaten lightly
+1 ½ c plain, unseasoned breadcrumbs
+Lemon slices and fresh parsley (to serve)</p>
+            <br>
+            <% if (!locals.music) { %>
+                <p>WE HAVE NO MUSIC</p>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="well">
+            <h3>
+                <% if (locals.hero) { %>
+                    <p>WE HAVE A HERO:</p>
+                    <%= locals.hero.name %>
+                    <% } %>
+                <br>
+                <% if (!locals.hero) { %>
+                    <p>WE HAVE NO HERO</p>
+                <% } %>
+            </h3>
+        </div>
+    </div>
+
+</div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

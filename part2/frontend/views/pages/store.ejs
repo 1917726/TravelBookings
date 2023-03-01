@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+
+        
+        <div class="jumbotron">
+         <!-- HW4 Recipe etc-->
+             <h1>Store</h1>
+             <p>We got what you need!</p> 
+             <i></i>
+             <b>Japanese Chef's Knife</b>
+             <br>
+             
+             <img src="https://www.surlatable.com/on/demandware.static/-/Sites-shop-slt-master-catalog/default/dwc1cb685e/images/large/4638672_01i_0918_s.jpg" alt="knife" width="500" height="500">
+             <br>
+             <p>$199.99</p>
+             <br>
+             <br>
+             <br>
+
+             <b>Kitchen Torch</b>
+             <br>
+             <img src="https://assets.bonappetit.com/photos/616dad3438539c42b841c34c/master/w_1280%2Cc_limit/kitchen-torch.jpg" alt="torch" width="500" height="500">
+             <p>$40.00</p>
+
+             <br>
+             <br>
+             <br>
+
+            <form action="/process_form" method="post">
+                <h2>Please sign in</h2>
+                <div class="form-group">
+                    <label for="exampleInputfname" class="form-label">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required
+                    autofocus>
+                    <small id="Help" class="form-text text-muted">We'll never share your info with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputlname" class="form-label">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" required
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputCreditcard" class="form-label">Credit</label>
+                    <input type="credit" name="credit" id="credit" class="form-control" placeholder="Credit Card Number"
+                    required>
+                 </div>
+                <div class="form-check">
+                    <input name="rememberme" type="checkbox">
+                    <label class="form-check-label" for="exampleCheck">Remember me</label>
+                </div>
+                
+            
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

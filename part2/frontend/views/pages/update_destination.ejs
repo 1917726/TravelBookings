@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div>
+            <form action="/update_destination" method="patch">
+                <h2>Update Destination</h2>
+                <br>
+                <p>Choose the destination you would like to update.</p>
+                <div class="destination-group">
+                    <label for="id" class="form-label">Destination ID</label>
+                    <input type="text" id="id" name="id" class="destination-info" placeholder="Destination ID" required autofocus>
+                </div>
+                <div class="destination-group">
+                    <label for="country" class="form-label">Country Name</label>
+                    <input type="text" id="country" name="country" class="destination-info" placeholder="Country Name" required autofocus>
+                </div>
+                <br>
+                <div class="destination-group">
+                    <label for="city" class="form-label">City Name</label>
+                    <input type="text" id="city" name="city" class="destination-info" placeholder="City Name" required>
+                </div>
+                <br>
+                <div class="destination-group">
+                    <label for="sightseeing" class="form-label">Sightseeing Method</label>
+                    <input type="text" id="sightseeing" name="sightseeing" class="destination-info" placeholder="Sightseeing" required>
+                </div>
+            
+                <br><br>
+                <!-- this is the submit, home, and cancel button -->
+                <input type="submit" value="Update Trip" class="button"> <a href="/"><button type="button" class="home">Home</button></a> <button type="button" class="cancel" onclick="window.location.href = '/plan_trip';" >Cancel</button>
+            </form>
+        </div>
+        
+        <hr>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

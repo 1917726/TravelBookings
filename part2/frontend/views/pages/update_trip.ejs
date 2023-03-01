@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div>
+            <form action="/plan_trip" method="post">
+                <h2>Update Trip</h2>
+                <br>
+                <p>Choose the trip you would like to update.</p>
+                <div class="trip-group">
+                    <label for="id" class="form-label">Trip ID</label>
+                    <input type="text" id="id" name="id" class="trip-info" placeholder="Trip ID" required autofocus>
+                </div>
+                <div class="trip-group">
+                    <label for="tripname" class="form-label">Trip Name</label>
+                    <input type="text" id="tripname" name="tripname" class="trip-info" placeholder="Trip Name" required autofocus>
+                </div>
+                <br>
+                <div class="trip-group">
+                    <label for="destinationid" class="form-label">Destination ID</label>
+                    <input type="text" id="destinationid" name="destinationid" class="trip-info" placeholder="Destination ID" required>
+                </div>
+                <br>
+                <div class="trip-group">
+                    <label for="transportion" class="form-label">Transportation Method</label>
+                    <input type="text" id="transportation" name="transportation" class="trip-info" placeholder="Transportation" required>
+                </div>
+                <br>
+                <div class="trip-group">
+                    <label for="startdate" class="form-label">Start Date</label>
+                    <input type="text" id="startdate" name="startdate" class="trip-info" placeholder="YYYY-MM-DD" required>
+                </div>
+                <br>
+                <div class="trip-group">
+                    <label for="enddate" class="form-label">End Date Method</label>
+                    <input type="text" id="enddate" name="enddate" class="trip-info" placeholder="YYYY-MM-DD" required>
+                </div>
+                <br><br>
+                <!-- this is the submit, home, and cancel button -->
+                <input type="submit" value="Update Trip" class="button"> <a href="/"><button type="button" class="home">Home</button></a> <button type="button" class="cancel" onclick="window.location.href = '/plan_trip';" >Cancel</button>
+            </form>
+        </div>
+        
+        <hr>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

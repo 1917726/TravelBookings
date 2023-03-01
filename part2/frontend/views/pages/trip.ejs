@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="jumbotron">
+            <p><%= locals.tagline %></p>
+            <ul>
+                <% if (locals.trips) { %>
+                    <% locals.trips.forEach(function(trip) { %>
+                        <li>
+                            <strong><%= trip.tripname %></strong>
+                            <%= trip.destinationid %>, Travel method: <%= trip.transportation %>
+                            | Trip starts on <%= trip.startdate %>, | Date of return will be <%= trip.enddate %>
+                        </li>
+                    <% }); %>
+                   
+                <% } %>
+                
+            </ul>
+        </div>
+    </div>
+
+  
+
+</div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

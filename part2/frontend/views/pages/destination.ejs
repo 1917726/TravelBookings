@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="jumbotron">
+            <p><%= locals.tagline1 %></p>
+            <ul>
+                <% if (locals.destinations) { %>
+                    <% locals.destinations.forEach(function(destination) { %>
+                        <li>
+                            <strong><%= destination.country %></strong>
+                            <%= destination.city %>, <%= destination.sightseeing %>
+                            
+                        </li>
+                    <% }); %>
+                   
+                <% } %>
+                
+            </ul>
+        </div>
+    <div class="col-sm-4">
+        <div class="well">
+            <h3>
+                <img src="https://travel.home.sndimg.com/content/dam/images/travel/stock/2016/6/27/0/GettyImages-594835943_great-pyramid-of-giza-egypt.jpg.rend.hgtvcom.966.725.suffix/1491841321970.jpeg"  alt="giza" width="700" height="450"> 
+            </h3>
+        </div>
+
+</div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

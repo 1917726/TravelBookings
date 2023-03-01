@@ -1,0 +1,48 @@
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div>
+            <form action="/add_destination" method="post">
+                <h2>Add Destination</h2>
+                <br>
+                <p>Choose the destination you would like to add to the travel options.</p>
+           
+                <div class="trip-group">
+                    <label for="country" class="form-label">Country Name</label>
+                    <input type="text" id="country" name="country" class="trip-info" placeholder="Country" required autofocus>
+                </div>
+                <br>
+                <div class="trip-group">
+                    <label for="city" class="form-label">City Name</label>
+                    <input type="text" id="city" name="city" class="trip-info" placeholder="City" required>
+                </div>
+                <br>
+                <div class="trip-group">
+                    <label for="sightseeing" class="form-label">Sights to see</label>
+                    <input type="text" id="sightseeing" name="sightseeing" class="trip-info" placeholder="sightseeing" required>
+                 <br><br>
+                <!-- this is the submit, home, and cancel button -->
+                <input type="submit" value="Add Destination" class="button"> <a href="/"><button type="button" class="home">Home</button></a> <button type="button" class="cancel" onclick="window.location.href = '/plan_trip';" >Cancel</button>
+                </div>
+                
+            </form>
+        </div>
+        
+        <hr>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

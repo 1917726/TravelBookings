@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <!-- display thanks.ejs-->
+    <main>
+        <!-- print thank you message-->
+        <p> Login successful:</p>
+
+        <!-- ALWAYS print the content of the form submission using EJS -->
+        <%=JSON.stringify(body)%>
+
+        <!-- PRINT ONLY IF USERNAME PW FORM IS DIRECTED HERE -->
+        <% if (locals.body) { %>
+            <% if (body.username) { %>
+                <p>Your username is: </p>
+                <p class="round3">
+                    <%= body.username %>
+                </p>
+            <% } %>
+           
+        <% } %>        
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>

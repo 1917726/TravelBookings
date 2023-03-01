@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+        
+    <main>
+        <div>
+            <form action="/cancel_trip" method="post">
+                <hr>
+                <h2>Remove a Destination</h2>
+                <br>
+                <!-- instructions for user -->
+                <p>Choose which Destination that will be canceled.</p>
+                <!-- error checking for empty array -->
+                <% if (Array.isArray(destinations) && destinations.length) { %>
+                    <% destinations.forEach(function(destinations) { %>
+                        <div><input type="checkbox" name=<%=destinations.id %>> &nbsp <%= destinations.country %> <%= destinations.city %></div>
+                    <% }); %>
+                <% } else { %>
+                    <!-- if there are no longer any destinations planned -->
+                    <p>You have no destinations in your list.</p>    
+                <% } %>
+                <br>
+   
+                <div>
+                <br>
+                <!-- this is the submit, home, and cancel button -->
+                <input type="submit" value="Remove Destination" class="button"> <a href="/"><button type="button" class="home">Home</button></a> <button type="button" class="cancel" onclick="window.location.href = '/remove_destination';" >Cancel</button></div>
+            </form>
+        </div> 
+        <hr>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>
